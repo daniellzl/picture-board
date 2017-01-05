@@ -1,0 +1,48 @@
+<header>
+    <h1 class="text-center">Welcome {{user.name}} (<a href="/user/signout" class="btn btn-sm" role="button" title="Sign Out of Your Account and Return to Home Page">Sign Out</a>)</h1>
+</header>
+<div class='row'>
+    <div class='col-sm-12 col-md-12 col-lg-12'>
+        <h3>Add a Picture</h3>
+        <div class='well'>
+            <form>
+                <div class="form-group">
+                    <input class="form-control input-lg" id="pictureTitle" type='text' name='title' placeholder='Picture Title'>
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-lg" id="pictureURL" type='text' name='URL' placeholder='URL of Picture'>
+                </div>
+            </form>
+            <button class="btn" id='addPicture' type="submit" title="Add Picture to Your Pictures">Add Picture</button>
+        </div>
+    </div>
+</div>
+{{#if pictures}}
+    <h3>Your Pictures</h3>
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        {{#pictures}}
+        <div class="grid-item well">
+            <h3>{{title}}</h3>
+            <a href="{{URL}}">
+                <img src="{{URL}}" alt="{{title}}" title="{{URL}}" onError="this.onerror=null;this.src='//upload.wikimedia.org/wikipedia/commons/1/16/No_image_available_450_x_600.svg';" />
+            </a>
+            <div class="text-center delete">
+                <a href="/user/delete/{{_id}}" title="Remove Picture from Your Pictures" class="btn btn-sm text-center" role="button"><span class="glyphicon glyphicon-remove"></span> Remove </a>
+            </div>
+        </div>
+        {{/pictures}}
+        <script>
+        	var $grid = $('.grid').masonry({
+        		itemSelector: '.grid-item',
+        		percentPosition: true,
+        		columnWidth: '.grid-sizer'
+        	});
+        	$grid.imagesLoaded().progress( function() {
+        		$grid.masonry();
+        	});
+        </script>
+    </div>
+{{else}}
+    <h3 class='text-center'>No pictures have been added.</h3>
+{{/if}}

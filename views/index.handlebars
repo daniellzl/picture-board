@@ -1,0 +1,22 @@
+{{#if pictures}}
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        {{#pictures}}
+        <div class="grid-item">
+            <img src="{{URL}}" alt="{{title}}" title="{{title}}" onError="this.onerror=null;this.src='//upload.wikimedia.org/wikipedia/commons/1/16/No_image_available_450_x_600.svg';" />
+        </div>
+        {{/pictures}}
+        <script>
+        	var $grid = $('.grid').masonry({
+        		itemSelector: '.grid-item',
+        		percentPosition: true,
+        		columnWidth: '.grid-sizer'
+        	});
+        	$grid.imagesLoaded().progress( function() {
+        		$grid.masonry();
+        	});
+        </script>
+    </div>
+{{else}}
+    <h3 class='text-center'>No pictures have been added.</h3>
+{{/if}}

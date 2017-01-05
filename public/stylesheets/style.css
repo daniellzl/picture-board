@@ -1,0 +1,79 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/woven.png');
+    color: #f2e8d5;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.navbar {
+    border-radius: 0px;
+    background-color: #cec284;
+}
+
+#title {
+    font-size: 1.5em;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+li a:hover, #title:hover {
+    background-color: #f2e8d5;
+}
+
+footer a:link, footer a:visited, footer a:hover, footer a:active {
+    text-decoration: none;
+    color: #f2e8d5;
+}
+
+.grid-sizer {
+    width: 33%;
+}
+
+.grid-item {
+    float: left;
+    width: 33%;
+}
+
+.form-control {
+    background-color: transparent;
+    color: #f2e8d5;
+}
+
+.well {
+    background-color: transparent;
+    color: #f2e8d5;
+    margin-bottom: 0px;    
+}
+
+img {
+    width: 100%;
+}
+
+#twitterButton {
+    width: 141px;
+}
+
+.delete {
+    margin-top: 5px;
+}
+
+.btn {
+    background-color: #cec284;
+    color: #000000;
+}
+
+.modal-content {
+    background-color: #000000;
+    color: #cec284;
+}
+
+.modal-footer {
+    text-align: center;
+}

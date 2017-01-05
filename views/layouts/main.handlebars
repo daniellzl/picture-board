@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Picture Board</title>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+        <script src="//unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/> 
+        <script src='/javascripts/scripts.js'></script>
+    </head>
+    <body>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a id="title" class="navbar-brand" href="/" title="Go to Home Page"><strong>Picture Board</strong></a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/auth/twitter" title="Sign into Your Account"><img id="twitterButton" alt="Twitter Button" src="//g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-link.png" /></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class='container'>
+            {{{body}}}
+        </div>
+        <footer class='text-center'>
+            <a href='https://www.freecodecamp.com/challenges/build-a-pinterest-clone' title="FreeCodeCamp Challenge Instructions">Credit</a> | <a href='https://github.com/daniellzl/pictureBoard' title="GitHub Repository">GitHub</a>
+        </footer>
+    </body>
+</html>
