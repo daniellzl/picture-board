@@ -1,4 +1,4 @@
-# Build a Pinterest Clone
+# Picture Board
 
 This website displays user posted images. Users can login through Twitter and link or delete their own images.
 
@@ -6,6 +6,6 @@ This website displays user posted images. Users can login through Twitter and li
 
 https://picture-board-dlzl.herokuapp.com
 
-## Credit: 
+## Credit:
 
 https://www.freecodecamp.com/challenges/build-a-pinterest-clone
